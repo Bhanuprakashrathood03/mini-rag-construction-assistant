@@ -1,0 +1,10 @@
+streamlit>=1.39.0
+sentence-transformers>=3.0.0
+faiss-cpu==1.8.0
+langchain>=0.2.10
+langchain-community>=0.2.10
+numpy==1.26.4
+torch>=2.2.0
+python-dotenv>=1.0.1
+requests
+
