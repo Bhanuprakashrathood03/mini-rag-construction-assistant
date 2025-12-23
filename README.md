@@ -28,13 +28,13 @@ The assistant responds with **fact-based**, explainable answers derived directly
 
 ## 🚀 Features
 
-✅ Local **Retrieval-Augmented Generation (RAG)** pipeline  
-✅ Uses **FAISS** for vector-based semantic search  
-✅ Embeddings via **SentenceTransformer (MiniLM)**  
-✅ LLM inference with **Llama 3** running locally through **Ollama**  
-✅ Real-time **streaming answers** (token-by-token) in Streamlit  
-✅ Context transparency — displays retrieved chunks used for answers  
-✅ Lightweight, offline-capable, and fully open-source  
+-  Local **Retrieval-Augmented Generation (RAG)** pipeline  
+-  Uses **FAISS** for vector-based semantic search  
+-  Embeddings via **SentenceTransformer (MiniLM)**  
+-  LLM inference with **Llama 3** running locally through **Ollama**  
+-  Real-time **streaming answers** (token-by-token) in Streamlit  
+-  Context transparency — displays retrieved chunks used for answers  
+-  Lightweight, offline-capable, and fully open-source  
 
 ---
 
@@ -114,15 +114,15 @@ The **Mini RAG Construction Assistant** leverages a modern AI/ML stack built for
 
 ## ⚙️ Key Advantages
 
-- 🧠 **Fully Local RAG** — No cloud API calls, data stays private.  
-- ⚡ **Fast Retrieval** — FAISS enables millisecond-scale vector search even with large embeddings.  
-- 💬 **Real-Time Generation** — Streams token-by-token responses from Ollama to the Streamlit UI.  
-- 🧩 **Modular Design** — Each layer (embedding, indexing, retrieval, generation) is independently configurable.  
-- 🛠️ **Developer-Friendly** — Clean architecture and minimal dependencies for easy experimentation.  
+-  **Fully Local RAG** — No cloud API calls, data stays private.  
+-  **Fast Retrieval** — FAISS enables millisecond-scale vector search even with large embeddings.  
+-  **Real-Time Generation** — Streams token-by-token responses from Ollama to the Streamlit UI.  
+-  **Modular Design** — Each layer (embedding, indexing, retrieval, generation) is independently configurable.  
+-  **Developer-Friendly** — Clean architecture and minimal dependencies for easy experimentation.  
 
 ---
 
-## 🧰 Optional Integrations (Future Enhancements)
+## ⚙️ Optional Integrations (Future Enhancements)
 - 🔗 Integration with OpenRouter or Hugging Face Inference API for hybrid LLM testing.  
 - 🧮 Experiment with `sentence-transformers/all-mpnet-base-v2` for improved embedding accuracy.  
 - 🗃️ Extend FAISS with persistent disk storage or Pinecone for scalable deployments.  
@@ -130,14 +130,14 @@ The **Mini RAG Construction Assistant** leverages a modern AI/ML stack built for
 
 ---
 
-> ⚡ *Built to demonstrate real-world RAG engineering — from embeddings to reasoning.*
+>  *Built to demonstrate real-world RAG engineering — from embeddings to reasoning.*
 
 
 # 📦 Installation & Setup
 
 Follow these steps to set up and run the **Mini RAG Construction Assistant** locally.
 
-### 🧰 Prerequisites
+### Prerequisites
 
 Before starting, ensure you have the following installed:
 * 🐍 **Python 3.11+**
@@ -229,9 +229,9 @@ Save the FAISS index and metadata to **/faiss_index/**
 
 You should see a confirmation like:
 ```
-✅ FAISS index saved to /faiss_index/indecimal_index.faiss
-✅ Metadata saved to /faiss_index/metadata.pkl
-🎉 Success! Your FAISS index and metadata are ready to use.
+FAISS index saved to /faiss_index/indecimal_index.faiss
+Metadata saved to /faiss_index/metadata.pkl
+Success! Your FAISS index and metadata are ready to use.
 ```
 
 ### 6️⃣ Launch the Streamlit App
@@ -247,8 +247,7 @@ Local URL: http://localhost:8501
 
 Network URL: http://192.168.xx.xx:8501
 
-👉 Open http://localhost:8501
- in your browser to use the app.
+-  Open http://localhost:8501 in your browser to use the app.
 ---
  # 🧩 How It Works
 
@@ -257,14 +256,14 @@ from document chunking and embedding to vector retrieval and context-aware LLM g
 
 ---
 
-# 🔹 Document Processing
+# Document Processing
 
 1. Loads all `.md` files from the `data/` directory  
 2. Splits text into smaller **semantic chunks** (~200–300 words each) for better embedding quality  
 3. Generates **dense vector embeddings** using  
    [`sentence-transformers/all-MiniLM-L6-v2`](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
 
-🧠 Example snippet (from `build_index.py`):
+Example snippet (from `build_index.py`):
 
 ```python
 from sentence_transformers import SentenceTransformer
@@ -310,9 +309,9 @@ the system retrieved relevant chunks and generated answers using **Llama 3 via O
 🎉 Success! Your FAISS index and metadata are ready to use.
 ```
 ### 📈 Summary
-✅ All responses were fully grounded in document context
-✅ No hallucinations or unsupported claims detected
-✅ Answers demonstrated consistent clarity and correctness
+-  All responses were fully grounded in document context
+-  No hallucinations or unsupported claims detected
+-  Answers demonstrated consistent clarity and correctness
 
 | Metric                | Result               |
 | --------------------- | -------------------- |
@@ -330,12 +329,11 @@ Each query demonstrates **context-grounded answers** generated by **Llama 3 via 
 
 ---
 
-### 🧠 Example 1 — Company Overview
+### Example 1 — Company Overview
 **User Query:**  
 > What is the company name? For what it is famous for?
 
-**Response:**  
-✅ The assistant correctly identifies **Indecimal Construction** and highlights its differentiators:
+**Response:** The assistant correctly identifies **Indecimal Construction** and highlights its differentiators:
 - Warranty & post-delivery support  
 - Transparency in pricing  
 - Fixed timelines with penalties for delays  
@@ -346,67 +344,61 @@ Each query demonstrates **context-grounded answers** generated by **Llama 3 via 
 
 ---
 
-### 🧠 Example 2 — Stage-Based Contractor Payments
+### Example 2 — Stage-Based Contractor Payments
 **User Query:**  
 > What makes contractor payments “stage-based”?
 
-**Response:**  
-✅ The model explains that **contractor payments are released only after verified stage completion**, ensuring accountability and transparency.
+**Response:** The model explains that **contractor payments are released only after verified stage completion**, ensuring accountability and transparency.
 
 ![Stage-Based Payments](./screenshots/screenshot2.png)
 
 ---
 
-### 🧠 Example 3 — Real-Time Progress Tracking
+### Example 3 — Real-Time Progress Tracking
 **User Query:**  
 > Do you provide real-time progress visibility?
 
-**Response:**  
-✅ The assistant confirms that **Indecimal provides real-time construction progress tracking** with live photo updates through their dashboard.
+**Response:** The assistant confirms that **Indecimal provides real-time construction progress tracking** with live photo updates through their dashboard.
 
 ![Real-Time Visibility](./screenshots/screenshot3.png)
 
 ---
 
-### 🧠 Example 4 — Transparent Pricing
+### Example 4 — Transparent Pricing
 **User Query:**  
 > How does Indecimal reduce hidden surprises in pricing?
 
-**Response:**  
-✅ The system grounds its answer in internal policy, explaining that **detailed design and transparent cost plans** eliminate “hidden surprises.”
+**Response:** The system grounds its answer in internal policy, explaining that **detailed design and transparent cost plans** eliminate “hidden surprises.”
 
 ![Transparent Pricing](./screenshots/screenshot4.png)
 
 ---
 
-### 🧠 Example 5 — Customer-Facing Commitments
+### Example 5 — Customer-Facing Commitments
 **User Query:**  
 > What Indecimal Promises (Customer-Facing Commitments)?
 
-**Response:**  
-✅ Indecimal emphasizes **confidence through commitment**, not just contracts — focusing on clarity, trust, and transparent communication.
+**Response:** Indecimal emphasizes **confidence through commitment**, not just contracts — focusing on clarity, trust, and transparent communication.
 
 ![Customer Commitments](./screenshots/screenshot5.png)
 
 ---
 
-### 🧠 Example 6 — Customer Journey (How We Work)
+### Example 6 — Customer Journey (How We Work)
 **User Query:**  
 > Describe the Customer Journey ("How We Work").
 
-**Response:**  
-✅ The assistant lists the **10-step customer experience** — from initial request to final maintenance support — covering design, financing, and quality control.
+**Response:** The assistant lists the **10-step customer experience** — from initial request to final maintenance support — covering design, financing, and quality control.
 
 ![Customer Journey](./screenshots/screenshot6.png)
 
 ---
 
-### 🧠 Example 7 — Package Pricing Details
+### Example 7 — Package Pricing Details
 **User Query:**  
 > What are the package pricing options (per sqft)?
 
-**Response:**  
-✅ The model extracts and formats pricing tiers directly from internal documents:
+**Response:** The model extracts and formats pricing tiers directly from internal documents:
 
 | Package | Price (incl. GST) |
 |----------|------------------|
@@ -421,46 +413,42 @@ Each query demonstrates **context-grounded answers** generated by **Llama 3 via 
 
 ---
 
-### 🧠 Example 8 — Quality Assurance Practices
+### Example 8 — Quality Assurance Practices
 **User Query:**  
 > How does Indecimal ensure construction quality?
 
-**Response:**  
-✅ The model explains that **Indecimal maintains on-site quality checks**, uses **branded materials**, and provides **structural warranties** as part of their QA process.
+**Response:** The model explains that **Indecimal maintains on-site quality checks**, uses **branded materials**, and provides **structural warranties** as part of their QA process.
 
 ![Quality Assurance](./screenshots/screenshot8.png)
 
 ---
 
-### 🧠 Example 9 — Financing Support
+### Example 9 — Financing Support
 **User Query:**  
 > Does Indecimal provide home financing?
 
-**Response:**  
-✅ The assistant accurately retrieves that **Indecimal assists clients with financing guidance** — covering documentation, eligibility, and loan disbursal through trusted partners.
+**Response:** The assistant accurately retrieves that **Indecimal assists clients with financing guidance** — covering documentation, eligibility, and loan disbursal through trusted partners.
 
 ![Financing Support](./screenshots/screenshot9.png)
 
 ---
 
-### 🧠 Example 10 — Warranty and Post-Delivery Support
+### Example 10 — Warranty and Post-Delivery Support
 **User Query:**  
 > What does Indecimal’s warranty cover?
 
-**Response:**  
-✅ The model retrieves that **Indecimal provides long-term structural warranties**, ensuring peace of mind through transparent maintenance and after-delivery commitments.
+**Response:** The model retrieves that **Indecimal provides long-term structural warranties**, ensuring peace of mind through transparent maintenance and after-delivery commitments.
 
 ![Warranty Support](./screenshots/screenshot10.png)
 
 ---
 
 
-### 🧠 Example 11 — Structural Specifications
+### Example 11 — Structural Specifications
 **User Query:**  
 > Structure Specifications (Highlights)
 
-**Response:**  
-✅ The assistant retrieves detailed structural specification data for steel and cement used across different packages:
+**Response:** The assistant retrieves detailed structural specification data for steel and cement used across different packages:
 - **Steel (Fe 550 / Fe 550D)** — JSW, Jindal, TATA (₹68,000–₹80,000/MT)
 - **Cement (43 & 53 Grade)** — Dalmia, Bharathi, Ultratech (₹370–₹400/bag)
 - **Aggregates:** 20mm & 40mm across all packages
@@ -469,12 +457,11 @@ Each query demonstrates **context-grounded answers** generated by **Llama 3 via 
 
 ---
 
-### 🧠 Example 12 — Flooring Specifications
+### Example 12 — Flooring Specifications
 **User Query:**  
 > Flooring (Indicative Wallets; laying charges vary)
 
-**Response:**  
-✅ The assistant summarizes flooring materials and indicative price ranges for **Living, Dining, Rooms, and Kitchen**:
+**Response:** The assistant summarizes flooring materials and indicative price ranges for **Living, Dining, Rooms, and Kitchen**:
 - Essential: Tiles up to ₹50/sqft  
 - Premier: Up to ₹100/sqft  
 - Infinia: Tiles/Granite/Marble up to ₹140/sqft  
@@ -484,12 +471,11 @@ Each query demonstrates **context-grounded answers** generated by **Llama 3 via 
 
 ---
 
-### 🧠 Example 13 — Payment Safety & Stage Controls
+### Example 13 — Payment Safety & Stage Controls
 **User Query:**  
 > Payment Safety & Stage Controls
 
-**Response:**  
-✅ The assistant explains Indecimal’s **Escrow-Based Payment Model**, where:
+**Response:** The assistant explains Indecimal’s **Escrow-Based Payment Model**, where:
 - Payments are released post stage-verification by a project manager  
 - Escrow accounts ensure customer fund safety  
 - Improves transparency and trust
@@ -498,12 +484,11 @@ Each query demonstrates **context-grounded answers** generated by **Llama 3 via 
 
 ---
 
-### 🧠 Example 14 — Delay Management & Accountability
+### Example 14 — Delay Management & Accountability
 **User Query:**  
 > Delay Management & Accountability
 
-**Response:**  
-✅ The model extracts Indecimal’s **zero-tolerance policy for construction delays**, mentioning:
+**Response:** The model extracts Indecimal’s **zero-tolerance policy for construction delays**, mentioning:
 - Integrated project management  
 - Daily tracking & deviation alerts  
 - Automated task assignments  
@@ -513,12 +498,11 @@ Each query demonstrates **context-grounded answers** generated by **Llama 3 via 
 
 ---
 
-### 🧠 Example 15 — Quality Assurance System
+### Example 15 — Quality Assurance System
 **User Query:**  
 > Quality Assurance System
 
-**Response:**  
-✅ The assistant outlines Indecimal’s **QA Framework**:
+**Response:** The assistant outlines Indecimal’s **QA Framework**:
 - 445+ structural checkpoints across project lifecycle  
 - Safety & quality scoring per phase  
 - Live dashboard for transparency and progress tracking  
@@ -527,12 +511,11 @@ Each query demonstrates **context-grounded answers** generated by **Llama 3 via 
 
 ---
 
-### 🧠 Example 16 — Maintenance Program (Post-Construction Support)
+### Example 16 — Maintenance Program (Post-Construction Support)
 **User Query:**  
 > Maintenance Program (Post-Construction Support)
 
-**Response:**  
-✅ The model summarizes the **Zero Cost Maintenance Program**, covering:
+**Response:** The model summarizes the **Zero Cost Maintenance Program**, covering:
 - Plumbing, electrical, and fittings  
 - Roofing and painting  
 - Wardrobe, modular kitchen, and crack filling  
@@ -542,12 +525,11 @@ Each query demonstrates **context-grounded answers** generated by **Llama 3 via 
 
 ---
 
-### 🧠 Example 17 — Financing Support
+### Example 17 — Financing Support
 **User Query:**  
 > Financing Support (Customer Experience Positioning)
 
-**Response:**  
-✅ The assistant retrieves Indecimal’s financing facilitation features:
+**Response:** The assistant retrieves Indecimal’s financing facilitation features:
 - Dedicated relationship manager  
 - Minimal documentation  
 - Loan confirmation within ~7 days, disbursal within ~30 days  
@@ -556,12 +538,11 @@ Each query demonstrates **context-grounded answers** generated by **Llama 3 via 
 
 ---
 
-### 🧠 Example 18 — Dedicated Team & Partner Onboarding
+### Example 18 — Dedicated Team & Partner Onboarding
 **User Query:**  
 > Dedicated Team & Partner Onboarding
 
-**Response:**  
-✅ The assistant identifies Indecimal’s multi-role structure:
+**Response:** The assistant identifies Indecimal’s multi-role structure:
 - Expert advisors, relationship managers, site engineers, and interior designers  
 - Multi-stage partner verification and onboarding process  
 
@@ -569,12 +550,11 @@ Each query demonstrates **context-grounded answers** generated by **Llama 3 via 
 
 ---
 
-### 🧠 Example 19 — Partner Onboarding (Quality Gatekeeping)
+### Example 19 — Partner Onboarding (Quality Gatekeeping)
 **User Query:**  
 > Partner Onboarding (Quality Gatekeeping)
 
-**Response:**  
-✅ The assistant describes the 4-step onboarding process:
+**Response:** The assistant describes the 4-step onboarding process:
 1. Project verification  
 2. Financial and background checks  
 3. Agreement signing for SOPs  
@@ -584,12 +564,11 @@ Each query demonstrates **context-grounded answers** generated by **Llama 3 via 
 
 ---
 
-### 🧠 Example 20 — Website-Level Customer Assurance Statements
+### Example 20 — Website-Level Customer Assurance Statements
 **User Query:**  
 > Website-Level Customer Assurance Statements (High-Level)
 
-**Response:**  
-✅ The assistant lists Indecimal’s **public customer assurance statements**, including:
+**Response:** The assistant lists Indecimal’s **public customer assurance statements**, including:
 - Transparent pricing & process  
 - Real-time tracking  
 - Fixed timelines  
@@ -600,7 +579,7 @@ Each query demonstrates **context-grounded answers** generated by **Llama 3 via 
 ![Customer Assurance](./screenshots/screenshot20.png)
 
 ---
-## ✅ Summary
+## Summary
 
 | Aspect | Description |
 |--------|-------------|
@@ -612,17 +591,17 @@ Each query demonstrates **context-grounded answers** generated by **Llama 3 via 
 | Vector DB | FAISS |
 | Transparency | Retrieved chunks displayed before each answer |
 
-✅ Each query was correctly answered based **only on retrieved chunks** from internal documents.  
-✅ No hallucinations or unsupported claims were observed.  
-✅ Real-time streaming improved interactivity and clarity.  
+-  Each query was correctly answered based **only on retrieved chunks** from internal documents.  
+-  No hallucinations or unsupported claims were observed.  
+-  Real-time streaming improved interactivity and clarity.  
 
 ---
 
-> 🧱 **The Mini RAG Construction Assistant** provides context-grounded, transparent, and explainable answers — powered by  
+>  **The Mini RAG Construction Assistant** provides context-grounded, transparent, and explainable answers — powered by  
 > **Llama 3 + FAISS + Sentence Transformers + Streamlit.**
 
 
-## 🧾 Deliverables & Requirements
+# 🧾 Deliverables & Requirements
 
 This project was built as part of the **“Build a Mini RAG!”** assignment for an AI Construction Marketplace assistant.  
 It demonstrates understanding of **Retrieval-Augmented Generation (RAG)** — including **document chunking, vector search, and grounded LLM responses** using **Ollama (Llama 3)**.
@@ -638,9 +617,9 @@ The goal is to build a system that:
 
 ---
 
-### 📦 Deliverables
+### Deliverables
 
-#### ✅ 1. GitHub Repository
+#### 1. GitHub Repository
 
 The repository contains:
 - 🧠 **Source Code** — complete RAG pipeline with modular scripts:
@@ -655,7 +634,7 @@ The repository contains:
 
 ---
 
-#### ✅ 2. Instructions for Local Execution
+#### 2. Instructions for Local Execution
 
 The `README.md` includes full step-by-step setup:
 1. Clone the repo  
@@ -681,12 +660,12 @@ Users can then open the app at [http://localhost:8501](http://localhost:8501) to
 
 ---
 
-### 🧠 Optional Enhancements (Implemented for Bonus Points)
+### 🧠 Optional Enhancements (Bonus)
 
-✅ **Local Open-Source LLM (Llama 3 via Ollama)** — no external API calls.  
-✅ **Streaming Response Rendering** — real-time token-by-token updates in the Streamlit UI.  
-✅ **Evaluation Metrics** — tested with 10 queries for Correctness, Clarity, and Groundedness.  
-✅ **Clean Project Structure** — modularized code, `.gitignore`, and organized screenshots.  
+-  **Local Open-Source LLM (Llama 3 via Ollama)** — no external API calls.  
+-  **Streaming Response Rendering** — real-time token-by-token updates in the Streamlit UI.  
+-  **Evaluation Metrics** — tested with 10 queries for Correctness, Clarity, and Groundedness.  
+-  **Clean Project Structure** — modularized code, `.gitignore`, and organized screenshots.  
 
 ---
 
