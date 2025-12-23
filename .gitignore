@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.pkl
+*.faiss
+faiss_index/
+*.bin
+*.dylib
+*.pt
+
